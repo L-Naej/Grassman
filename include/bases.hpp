@@ -1,6 +1,4 @@
-#ifndef BASES_HPP
-#define BASES_HPP
-
+#pragma once
 ///Les bases de P3
 struct Bases
 {
@@ -10,4 +8,3 @@ struct Bases
   static const unsigned int e4 = 0x08;
 };
 
-#endif // BASES_HPP

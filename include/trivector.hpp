@@ -1,3 +1,5 @@
+#pragma once
+
 //nombre de base possible : 4 (e123,e124,e134,e234) donc vector4d
 
 class GCA_trivector: public Eigen::Vector4d

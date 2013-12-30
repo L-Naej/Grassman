@@ -1,3 +1,5 @@
+#pragma once
+
 //nombre de base possible : 1 (e1234)
 
 class GCA_quadrivector
