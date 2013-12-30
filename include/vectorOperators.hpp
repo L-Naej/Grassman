@@ -2,6 +2,8 @@
 #include "vector.hpp"
 #include "bivector.hpp"
 
+namespace gca
+{
 //GCA_vector operator^(GCA_scalar value);
 
 GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b);
@@ -20,3 +22,5 @@ GCA_bivector operator^(GCA_antitrivector& other);
 
 GCA_vector operator^(GCA_antiquadrivector& other);
 */
+
+} //namespace gca

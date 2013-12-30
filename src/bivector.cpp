@@ -1,6 +1,8 @@
 #include "bivector.hpp"
 #include "bases.hpp"
-#include "vectorWedgeProduct.hpp"
+#include "vectorOperators.hpp"
+
+using namespace gca;
 
 GCA_bivector::GCA_bivector()
   : Base()

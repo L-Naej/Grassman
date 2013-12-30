@@ -1,5 +1,6 @@
 #include "vector.hpp"
 
+using namespace gca;
 /*
 GCA_antitrivector operator~(){
   //si on est sur ei, il faut un eiii pour faire R4

@@ -1,4 +1,6 @@
-#include "vectorWedgeProduct.hpp"
+#include "vectorOperators.hpp"
+
+using namespace gca;
 
 GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
 {

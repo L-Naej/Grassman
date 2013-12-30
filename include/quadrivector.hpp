@@ -1,6 +1,8 @@
 #pragma once
 
 //nombre de base possible : 1 (e1234)
+namespace gca
+{
 
 class GCA_quadrivector
 {
@@ -33,3 +35,5 @@ class GCA_quadrivector
 
 	}
 };
+
+} //namespace gca

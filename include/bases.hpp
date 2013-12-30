@@ -1,5 +1,10 @@
 #pragma once
 ///Les bases de P3
+///
+
+namespace gca
+{
+
 struct Bases
 {
   static const unsigned int e1 = 0x01;
@@ -8,3 +13,4 @@ struct Bases
   static const unsigned int e4 = 0x08;
 };
 
+} //namespace gca

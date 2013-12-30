@@ -3,6 +3,9 @@
 //nombre de base possible : 6 (e12,e13,e14,e23,e24,e34) donc vector6d (ca existe? sinon Xd)
 #include <Eigen/Dense>
 
+namespace gca
+{
+
 class GCA_vector;
 
 typedef Eigen::Matrix<double, 6, 1> Vector6d;
@@ -39,3 +42,5 @@ private:
   unsigned int fourthBase;
 
 };
+
+} //namespace gca
