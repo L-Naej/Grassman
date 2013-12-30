@@ -16,8 +16,10 @@ public:
 	GCA_vector (const GCA_vector& other);
   GCA_vector(double x, double y, double z, double w);
 	~GCA_vector();
+	void GCA_vector::setBases();
 
   //GCA_antitrivector operator~();
+	std::vector <unsigned int> Bases;
 
 };
 

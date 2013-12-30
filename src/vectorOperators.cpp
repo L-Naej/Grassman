@@ -5,13 +5,13 @@ using namespace gca;
 GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
 {
   GCA_bivector res;
-
-  res(0) = a(0) * b(1) - a(1) * b(0);
-  res(1) = a(0) * b(2) - a(2) * b(0);
-  res(2) = a(0) * b(3) - a(3) * b(0);
-  res(3) = a(1) * b(2) - a(2) * b(1);
-  res(4) = a(1) * b(3) - a(3) * b(1);
-  res(5) = a(2) * b(3) - a(3) * b(2);
+  int compteur = 0;
+  for (int i=0; i<a.size()-1; ++i){
+    for (int j=i+1; i<a.size(); ++j){
+      res(compteur)=a(i)*b(j)-a(j)*b(i);
+      compteur ++;
+    }
+  }
 
   return res;
 }
