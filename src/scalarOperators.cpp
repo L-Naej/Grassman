@@ -90,3 +90,9 @@ GCA_antiquadvector operator^ (const GCA_scalar& a, const GCA_antiquadvector& b){
 	}
 	return res;
 }
+
+GCA_antiquadvector operator~(const GCA_scalar& a){
+	GCA_antiquadvector res;
+	res<<a->value;
+	return res;
+}

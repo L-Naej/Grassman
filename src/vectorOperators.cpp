@@ -16,52 +16,35 @@ GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
   return res;
 }
 
-/*
-GCA_vector operator^(GCA_scalar value){
-  //vector^scalar = vector
-  // 1-blade + 0-balde = 1-blade
-}
-
-GCA_trivector operator^(GCA_bivector other){
-  //vector^bivector = trivector
-  // 1-blade + 2-balde = 3-blade
+GCA_trivector operator^(const GCA_vector& a, const GCA_bivector& b){
 
 }
 
-GCA_quadrivector operator^(GCA_trivector& other){
-  //vector^trivector = quadrivector
-  // 1-blade + 3-balde = 4-blade
-
+GCA_quadvector operator^(const GCA_vector& a, const GCA_trivector& b){
+  
 }
 
-
-GCA_antitrivector operator~(){
-  //si on est sur ei, il faut un eiii pour faire R4
+GCA_quadvector operator^(const GCA_vector& a, const GCA_antivector& b){
+  
 }
 
-
-
-GCA_quadrivector operator^(GCA_antivector& other){
-  //vector^antivector = quadrivector
-  // 1-blade + 3-balde = 4-blade
-
+GCA_trivector operator^(const GCA_vector& a, const GCA_antibivector& b){
+  
 }
 
-GCA_trivector operator^(GCA_antibivector other){
-  //vector^antibivector = trivector
-  // 1-blade + 2-balde = 3-blade
-
+GCA_bivector operator^(const GCA_vector& a, const GCA_antitrivector& b){
+  
 }
 
-GCA_bivector operator^(GCA_antitrivector& other){
-  //vector^antirivector = quadrivector
-  // 1-blade + 1-balde = 2-blade
-
+GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
+  
 }
 
-GCA_vector operator^(GCA_antiquadrivector& other){
-  //vector^antiquadrivector = vector
-  // 1-blade + 0-balde = 1-blade
+/*--------------------------------------- Le convertisseur en base duale donne un trivector ---------------------------------------*/
 
+//car Bases (1,2,3,4)
+GCA_antitrivector operator~(const GCA_scalar& a){
+  GCA_antitrivector result;
+  result<< -a(0), a(1, -a(2), a(3);
+    return result;
 }
-*/

@@ -11,6 +11,10 @@ class GCA_trivector: public Eigen::Vector4d
 	GCA_trivector (const GCA_trivector& other);
 	GCA_trivector(a,b,c,d);
 	~GCA_trivector();
+	void GCA_trivector::setBases();
+
+	std::vector<unsigned int> Bases;
+
 
 	/*-------------------------------------------*/
 

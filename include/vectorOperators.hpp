@@ -1,26 +1,35 @@
 #pragma once
+#include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
+#include "trivector.hpp"
+#include "quadvector.hpp"
+
+
 
 namespace gca
 {
-//GCA_vector operator^(GCA_scalar value);
 
 GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b);
 
-/*
-GCA_trivector operator^(GCA_bivector other);
+GCA_trivector operator^(const GCA_vector& a, const GCA_bivector& b);
 
-GCA_quadrivector operator^(GCA_trivector& other);
+GCA_quadvector operator^(const GCA_vector& a, const GCA_trivector& b);
+
+/*------------------------------ Anti -------------------------------*/
+
+GCA_quadvector operator^(const GCA_vector& a, const GCA_antivector& b);
+
+GCA_trivector operator^(const GCA_vector& a, const GCA_antibivector& b);
+
+GCA_bivector operator^(const GCA_vector& a, const GCA_antitrivector& b);
+
+GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b);
+
+// convertisseur en base duale
+GCA_antitrivector operator~(const GCA_scalar& a);
 
 
-GCA_quadrivector operator^(GCA_antivector& other);
 
-GCA_trivector operator^(GCA_antibivector other);
-
-GCA_bivector operator^(GCA_antitrivector& other);
-
-GCA_vector operator^(GCA_antiquadrivector& other);
-*/
 
 } //namespace gca

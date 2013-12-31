@@ -20,6 +20,7 @@ public:
   GCA_bivector(double a, double b, double c, double d, double e, double f);
   GCA_bivector(const GCA_vector& a, const GCA_vector& b);
 	~GCA_bivector();
+  void GCA_bivector::setBases();
 
   //operator<< d'affectation déjà défini par Eigen::Matrix
 
@@ -36,10 +37,7 @@ public:
 */
 private:
   //Les bases par composante
-  unsigned int firstBase;
-  unsigned int secondBase;
-  unsigned int thirdBase;
-  unsigned int fourthBase;
+std::vector<unsigned int> Bases;
 
 };
 
