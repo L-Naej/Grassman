@@ -10,8 +10,7 @@ GCA_scalar::GCA_scalar()
 }
 
 GCA_scalar::GCA_scalar(const GCA_scalar& other)
-  : 
-  value(other->value)
+  : Bases(0),value(other->value)
 {
 }
 

@@ -1,12 +1,19 @@
 #pragma once
-#include "scalar.hpp"
-#include "vector.hpp"
-#include "bivector.hpp"
-#include "trivector.hpp"
+#include "quadvectorOperators.hpp"
 #include "quadvector.hpp"
+#include "antiquadvector.hpp"
+#include "antiscalar.hpp"
 
 namespace gca
 {
+
+	GCA_quadvector operator^(const GCA_quadvector& a, const GCA_antiquadvector& b){
+	GCA_bivector result;
+	GCA_scalar BD-b=~b;
+	result = a^BD-b;
+	return result;
+}
+
 	/*--------------------------- Convertisseur en base duale ------------------------*/
 //Bases (e1234)
 

@@ -18,7 +18,6 @@ public:
 	~GCA_vector();
 	void GCA_vector::setBases();
 
-  //GCA_antitrivector operator~();
 	std::vector <unsigned int> Bases;
 
 };

@@ -32,6 +32,6 @@ GCA_vector::~GCA_vector()
 
 void GCA_vector::setBases(){
 	for (int i=0; i<4; ++i){
-		Bases.push-back(i);
+		Bases.push_back(i);
 	}
 }

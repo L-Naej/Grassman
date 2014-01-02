@@ -1,4 +1,14 @@
 #include "scalarOperators"
+#include "scalar.hpp"
+#include "vector.hpp"
+#include "bivector.hpp"
+#include "trivector.hpp"
+#include "quadvector.hpp"
+#include "antiscalar.hpp"
+#include "antivector.hpp"
+#include "antibivector.hpp"
+#include "antitrivector.hpp"
+#include "antiquadvector.hpp"
 
 using namespace gca;
 

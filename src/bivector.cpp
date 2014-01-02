@@ -1,6 +1,4 @@
 #include "bivector.hpp"
-#include "bases.hpp"
-#include "vectorOperators.hpp"
 
 using namespace gca;
 
@@ -22,11 +20,6 @@ GCA_bivector::GCA_bivector(double a, double b, double c, double d, double e, dou
   setBases();
 }
 
-/*GCA_bivector::GCA_bivector(const GCA_vector& a, const GCA_vector& b)
-{
-  *this = a ^ b;
-}*/ 
-  // Pourquoi ici? C'est sans vectorOpérations non?
 
 GCA_bivector::~GCA_bivector()
 {
