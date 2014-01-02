@@ -1,10 +1,5 @@
 #include "bivectorOperators.hpp"
-
-GCA_antibivector operator~(const GCA_bivector& bivec)
-{
-
-}
-
+s
 
 /*--------------------------- Convertisseur en base duale ------------------------*/
 //Bases (e12, e13, e14, e23, e24, e34)

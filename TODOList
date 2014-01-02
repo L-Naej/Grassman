@@ -1,0 +1,57 @@
+vectorOperators :
+wedge avec : 
+	bivector
+	trivector
+
+	antiquadvector
+	antitrivector
+	antibivector
+	antivector
+------------------------------------
+BivectorOperators:
+wedge avec :
+	bivector
+
+	antibivector
+	antitrivector
+	antiquadvector
+------------------------------------
+TrivectorOperators:
+wedge avec:
+	antitrivector
+	antiquadvector	
+-----------------------------------
+QuadvectorOperators:
+wedge avec :
+	antiquadvector
+
+-------------------------------------------------------------
+antivector:
+wedge avec:
+	antiscalar
+	antivector
+	antibivector
+	antitrivector
+------------------------------------
+antibivector:
+wedge avec:
+	antiscalar
+	antivector
+	antibivector
+------------------------------------
+antitrivector:
+wedge avec:
+	antiscalar
+	antivector
+------------------------------------
+antiquadvector:
+wedge avec:
+	antiscalar
+
+
+
+
+antiscalar,antivector,antibivector,antitrivector,antiquadvector: setBases
+
+POUR TOUS : operator <<, operator =, fonction d'affichage		
+
