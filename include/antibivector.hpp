@@ -14,6 +14,10 @@ public:
 
   GCA_antibivector();
   GCA_antibivector(const GCA_antibivector& other);
+  GCA_antibivector(double a, double b, double c, double d);
+  ~GCA_antibivector();
+  	std::vector <unsigned int> Bases;
+	void GCA_antibivector::setBases();
 
 private:
 };

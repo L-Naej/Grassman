@@ -3,8 +3,8 @@
 namespace gca
 {
 
-	class GCA_quadvector: public Eigen::Vector4d
-	{
+	class GCA_quadvector{
+		double value;
 
 		GCA_quadvector();
 		GCA_quadivector (const GCA_quadvector& other);

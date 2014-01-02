@@ -8,8 +8,12 @@
 namespace gca
 {
 
-GCA_trivector operator^(GCA_vector& other);
-//GCA_quadrivector operator^(GCA_bivector other);
+GCA_quadvector operator^(GCA_bivector& a, GCA_bivector& b);
+
+GCA_quadvector operator^(GCA_bivector& a, GCA_antibivector& b);
+GCA_trivector operator^(GCA_bivector& a, GCA_antitrivector& b);
+GCA_bivector operator^(GCA_bivector& a, GCA_antiquadvector& b);
+
 
 GCA_antibivector operator~(const GCA_bivector& bivec);
 

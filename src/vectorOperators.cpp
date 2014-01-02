@@ -17,8 +17,20 @@ GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
 }
 
 GCA_trivector operator^(const GCA_vector& a, const GCA_bivector& b){
+    gca::GCA_trivector result;
+    result(0) = b(0)*a(2) - b(1)*a(1) + b(3)*a(0);
+    result(1) = b(0)*a(3) - b(2)*a(1) + b(4)*a(0);
+    result(2) = b(1)*a(3) - b(2)*a(2) + b(5)*a(0);
+    result(3) = b(3)*a(3) - b(4)*a(2) + b(5)*a(1);
+    return result;
 
 }
+/* EXPLICATION 
+b= (b(0)e12,b(1)e13, b(2)e14, b(3)e23, b(4)e24, b(5)e34)
+a=(a(0)e1, a(1)e2, a(2)e3, a(3)e4)
+
+On fait les combinaisons pour avoir un trivector =(result(0)e123, result(1)e124, result(2)e134, result(3)e234)
+*/
 
 GCA_quadvector operator^(const GCA_vector& a, const GCA_trivector& b){
   

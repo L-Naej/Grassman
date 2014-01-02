@@ -22,19 +22,7 @@ public:
 	~GCA_bivector();
   void GCA_bivector::setBases();
 
-  //operator<< d'affectation déjà défini par Eigen::Matrix
 
-  /*
-  GCA_bivector operator^(GCA_scalar value);
-  GCA_trivector operator^(GCA_vector& other);
-
-  GCA_quadrivector operator^(GCA_bivector other);
-  GCA_antibivector operator~();
-
-  GCA_quadrivector operator^(GCA_antitrivector& other);
-
-  GCA_trivector operator^(GCA_antiquadrivector& other);
-*/
 private:
   //Les bases par composante
 std::vector<unsigned int> Bases;

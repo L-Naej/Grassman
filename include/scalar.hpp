@@ -13,6 +13,7 @@ namespace gca
 		GCA_scalar::GCA_scalar(const GCA_scalar& other);
 		GCA_scalar::GCA_scalar(double value);
 		GCA_scalar::~GCA_scalar();
+		void GCA_scalar::setBases();
 
 	};
 }
