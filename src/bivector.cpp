@@ -28,7 +28,7 @@ GCA_bivector::~GCA_bivector()
 void GCA_bivector::setBases(){
   for (int i=1; i<=3; ++i){
     for (int j=i+1; j<=4; ++j){
-        Bases.push_back(i*10+j*);
+        Bases.push_back(i*10+j);
       }
   }
 }

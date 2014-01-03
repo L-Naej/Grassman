@@ -40,3 +40,5 @@ GCA_antiquadvector operator^ (const GCA_scalar& a, const GCA_antiquadvector& b);
 /*-------------------------------------------Convertisseur base duale ------------------------------------*/
 
 GCA_antiquadvector operator~(const GCA_scalar& a);
+
+}

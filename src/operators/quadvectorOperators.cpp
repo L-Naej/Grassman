@@ -1,4 +1,7 @@
 #include "operators/quadvectorOperators.hpp"
+#include "anti_operators/antiquadvectorOperators.hpp"
+#include "operators/scalarOperators.hpp"
+
 #include "quadvector.hpp"
 #include "antiquadvector.hpp"
 #include "antiscalar.hpp"
@@ -9,9 +12,9 @@ namespace gca
 {
 
 	GCA_quadvector operator^(const GCA_quadvector& a, const GCA_antiquadvector& b){
-	GCA_bivector result;
-  GCA_scalar BD_b=~b;
-  result = a^BD_b;
+    GCA_quadvector result;
+    GCA_scalar BD_b=~b;
+    result = BD_b^a;
 	return result;
 }
 

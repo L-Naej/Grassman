@@ -1,5 +1,6 @@
 #pragma once
 #include <Eigen/Dense>
+#include <vector>
 
 namespace gca
 {
@@ -11,13 +12,14 @@ namespace gca
 
 		GCA_quadvector();
     GCA_quadvector (const GCA_quadvector& other);
-		GCA_quadvector(double a, double b,double c,double d);
+        GCA_quadvector(double value);
 		~GCA_quadvector();
     void setBases();
 
     GCA_quadvector& operator=(const GCA_quadvector& other);
 
 		std::vector<unsigned int> Bases;
+        double value;
 
 	};
 

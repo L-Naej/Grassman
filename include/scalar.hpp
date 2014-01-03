@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 
 #include <Eigen/Dense>
 
@@ -6,8 +7,7 @@ namespace gca
 {
 	class GCA_scalar{
   private:
-    std::vector<unsigned int> Bases;
-		double value;
+    std::vector <unsigned int> Bases;
 
   public:
     GCA_scalar();
@@ -19,6 +19,8 @@ namespace gca
 
     operator double() const
     {return value;}
+
+    double value;
 
 	};
 }

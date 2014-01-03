@@ -5,9 +5,8 @@
 namespace gca
 {
   class GCA_antiscalar{
-  private:
-		double value;
   public:
+		double value;
     GCA_antiscalar();
     GCA_antiscalar(const GCA_antiscalar& other);
     GCA_antiscalar(double value);

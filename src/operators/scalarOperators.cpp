@@ -1,4 +1,4 @@
-#include "operators/scalarOperations.hpp"
+#include "operators/scalarOperators.hpp"
 #include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
@@ -94,15 +94,12 @@ GCA_antitrivector operator^ (const GCA_scalar& a, const GCA_antitrivector& b){
 
 GCA_antiquadvector operator^ (const GCA_scalar& a, const GCA_antiquadvector& b){
 	GCA_antiquadvector res;
-	for (int i=0; i<b.size();++i){
-    res(i) = a.value * b(i);
-
-	}
+    res = a.value *b.value;
 	return res;
 }
 
 GCA_antiquadvector operator~(const GCA_scalar& a){
 	GCA_antiquadvector res;
-  res << a.value;
+  res.value = a.value;
 	return res;
 }

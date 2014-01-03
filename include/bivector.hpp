@@ -2,6 +2,7 @@
 
 //nombre de base possible : 6 (e12,e13,e14,e23,e24,e34)
 #include <Eigen/Dense>
+#include <vector>
 
 namespace gca
 {

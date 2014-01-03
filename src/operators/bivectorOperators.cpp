@@ -19,10 +19,10 @@ GCA_quadvector operator^(const GCA_bivector& a, const GCA_bivector& b){
   for (int i=0; i<=size; ++i){
     // Les bases duales de e24=-e13 et celle de e13=-e24, qui sont aux indices 1 et 4 dans Bases
     if (i==1 || i==4){
-      result -= a(i) * b(size-i);
+      result.value = result.value - a(i) * b(size-i);
     }
     else{
-      result += a(i) * b(size-i);
+      result.value = result.value+ a(i) * b(size-i);
     }
   }	
   return result;
@@ -36,10 +36,10 @@ GCA_quadvector operator^(const GCA_bivector& a, const GCA_antibivector& b){
   for (int i=0; i<=size; ++i){
     // Les bases duales de e24=-e13 et celle de e13=-e24, qui sont aux indices 1 et 4 dans Bases
     if (i==1 || i==4){
-      result -= a(i)*b(size-i);
+      result.value = result.value- a(i)*b(size-i);
     }
     else{
-      result += a(i)*b(size-i);
+      result.value = result.value + a(i)*b(size-i);
     }
   }	
   return result;

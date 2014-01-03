@@ -1,4 +1,5 @@
 #pragma once
+#include "antiquadvector.hpp"
 #include "quadvectorOperators.hpp"
 #include "quadvector.hpp"
 #include "antiscalar.hpp"

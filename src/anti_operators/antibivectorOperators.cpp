@@ -1,4 +1,4 @@
-#include "antibivectorOperators.hpp"
+#include "anti_operators/antibivectorOperators.hpp"
 #include "scalar.hpp"
 #include "antibivector.hpp"
 
@@ -13,10 +13,10 @@ GCA_scalar operator^(const GCA_antibivector& a, const GCA_antibivector& b){
 
   for (int i=0; i<=size; ++i){
     if (i==1 || i==4){
-      result->value -= a(i)*b(size-i);
+      result.value = a(i)*b(size-i);
     }
     else{
-      result->value += a(i)*b(size-i);
+      result.value += a(i)*b(size-i);
     }
   }
 }

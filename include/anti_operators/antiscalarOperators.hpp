@@ -1,4 +1,4 @@
-#include "antiscalarOperators.hpp"
+#include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
 #include "quadvector.hpp"

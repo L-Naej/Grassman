@@ -1,4 +1,4 @@
-#include "antiscalarOperators.hpp"
+#include "anti_operators/antiscalarOperators.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
 #include "quadvector.hpp"
@@ -20,7 +20,7 @@ GCA_antiscalar operator^(const GCA_antiscalar& a, const GCA_antiscalar& b){
 
 //4+3-4=3
 GCA_trivector operator^(const GCA_antiscalar& a, const GCA_antivector& b){
-	GCA_antitrivector result;
+    GCA_trivector result;
 	for (int i=0; i< b.size(); ++i){
 		result(i)=a.value*b(i);
 	}
@@ -30,7 +30,7 @@ GCA_trivector operator^(const GCA_antiscalar& a, const GCA_antivector& b){
 
 //4+2-4=2
 GCA_bivector operator^(const GCA_antiscalar& a, const GCA_antibivector& b){
-	GCA_antibivector result;
+    GCA_bivector result;
 	for (int i=0; i< b.size(); ++i){
 		result(i)=a.value*b(i);
 	}
@@ -40,7 +40,7 @@ GCA_bivector operator^(const GCA_antiscalar& a, const GCA_antibivector& b){
 
 //4+1-4=1
 GCA_vector operator^(const GCA_antiscalar& a, const GCA_antitrivector& b){
-	GCA_antivector result;
+    GCA_vector result;
 	for (int i=0; i< b.size(); ++i){
 		result(i)=a.value*b(i);
 	}

@@ -1,4 +1,3 @@
-#include "antivectorOperators.hpp"
 #include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"

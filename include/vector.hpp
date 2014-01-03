@@ -2,6 +2,7 @@
 
 //nombre de base possible : 4 (e1,e2,e3,e4) donc vector4d
 #include <Eigen/Dense>
+#include <vector>
 
 namespace gca
 {

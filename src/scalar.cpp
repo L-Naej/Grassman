@@ -29,3 +29,5 @@ GCA_scalar&GCA_scalar::operator =(const GCA_scalar& other)
 
   return *this;
 }
+
+

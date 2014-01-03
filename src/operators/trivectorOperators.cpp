@@ -1,5 +1,8 @@
-#pragma once
-#include "trivectorOperators.hpp"
+
+#include "operators/trivectorOperators.hpp"
+#include "operators/scalarOperators.hpp"
+
+#include "anti_operators/antiquadvectorOperators.hpp"
 #include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
@@ -19,10 +22,10 @@ GCA_quadvector operator^(const GCA_trivector& a, const GCA_antitrivector b){
 
   for (int i=0; i<=b.size(); ++i){
     if (i%2 == 0){
-      result->value -= a(i)*b(size-i);
+      result.value = result.value- a(i)*b(size-i);
     }
     else{
-      result->value += a(i)*b(size-i);
+      result.value =result.value + a(i)*b(size-i);
     }
   }
   return result;
@@ -30,11 +33,10 @@ GCA_quadvector operator^(const GCA_trivector& a, const GCA_antitrivector b){
 }
 
 
-GCA_quadvector operator^(const GCA_trivector& a, const GCA_antiquadvector b){
-	GCA_vector result;
-	  GCA_scalar BD-b=~b;
-	  result = a^BD-b;
-	  return result;
+GCA_trivector operator^(const GCA_trivector& a, const GCA_antiquadvector b){
+    GCA_scalar BD_b=~b;
+      GCA_trivector result = BD_b^a;
+      return result;
 }
 
 

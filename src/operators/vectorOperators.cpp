@@ -1,4 +1,7 @@
 #include "operators/vectorOperators.hpp"
+#include "operators/scalarOperators.hpp"
+#include "anti_operators/antiquadvectorOperators.hpp"
+
 #include "vector.hpp"
 #include "bivector.hpp"
 #include "trivector.hpp"
@@ -100,15 +103,15 @@ GCA_bivector operator^(const GCA_vector& a, const GCA_antitrivector& b){
 GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
   GCA_vector result;
   GCA_scalar BD_b=~b;
-  result = a^BD_b;
+  result = BD_b^a;
   return result;
 }
 
 /*--------------------------------------- Le convertisseur en base duale donne un trivector ---------------------------------------*/
 
 //car Bases (1,2,3,4)
-GCA_antitrivector operator~(const GCA_scalar& a){
+/*GCA_antitrivector operator~(const GCA_scalar& a){
   GCA_antitrivector result;
   result << -a(0), a(1), -a(2), a(3);
     return result;
-}
+}*/

@@ -16,12 +16,10 @@ GCA_quadvector::GCA_quadvector(const GCA_quadvector& other)
 
 }
 
-GCA_quadvector::GCA_quadvector(double x, double y, double z, double w)
-  : Base()
+GCA_quadvector::GCA_quadvector(double value)
+    : Base(), value(value)
 {
-  *this << x, y, z, w;
   	setBases();
-
 }
 
 GCA_quadvector::~GCA_quadvector()
