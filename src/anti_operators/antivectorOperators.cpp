@@ -46,9 +46,8 @@ GCA_bivector operator^(const GCA_antivector& a, const GCA_antivector& b){
       res(compteur)=a(i)*b(j)-a(j)*b(i);
       compteur ++;
     }
-}
-
-
+  }
+  return res;
 }
 
 }

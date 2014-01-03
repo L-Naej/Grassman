@@ -19,9 +19,9 @@ GCA_scalar operator^(const GCA_antibivector& a, const GCA_antibivector& b){
       result.value += a(i)*b(size-i);
     }
   }
+
+  return result;
 }
-
-
 
 
 

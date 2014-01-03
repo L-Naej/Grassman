@@ -33,6 +33,8 @@ GCA_antivector&GCA_antivector::operator =(const GCA_antivector& other)
 {
   *this = other;
   Bases = other.Bases;
+
+  return *this;
 }
 
 void GCA_antivector::setBases(){
