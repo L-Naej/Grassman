@@ -8,7 +8,7 @@ GCA_antiquadvector::GCA_antiquadvector()
 }
 
 GCA_antiquadvector::GCA_antiquadvector(const GCA_antiquadvector& other)
-  :value(other->value)
+  :value(other.value)
 {
 }
 

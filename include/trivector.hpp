@@ -6,13 +6,14 @@ namespace gca
 
 class GCA_trivector: public Eigen::Vector4d
 {
-
+public:
 	GCA_trivector();
 	GCA_trivector (const GCA_trivector& other);
 	GCA_trivector(double a,double b,double c,double d);
 	~GCA_trivector();
-	void GCA_trivector::setBases();
+  void setBases();
 
+private:
 	std::vector<unsigned int> Bases;
 
 };

@@ -8,6 +8,12 @@
 namespace gca
 {
 
+class GCA_antiscalar;
+class GCA_antivector;
+class GCA_antibivector;
+class GCA_antitrivector;
+class GCA_antiquadvector;
+
 GCA_scalar operator^ (const GCA_scalar& a, const GCA_scalar& b);
 
 GCA_vector operator^ (const GCA_scalar& a, const GCA_vector& b);

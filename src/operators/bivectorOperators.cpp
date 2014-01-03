@@ -1,11 +1,10 @@
-#include "bivectorOperators.hpp"
+#include "operators/bivectorOperators.hpp"
 #include "bivector.hpp"
 #include "quadvector.hpp"
 #include "trivector.hpp"
 #include "antitrivector.hpp"
-#include "antiquadvector.hpp"
 #include "antibivector.hpp"
-
+#include "antiquadvector.hpp"
 
 namespace gca{
 
@@ -20,10 +19,10 @@ GCA_quadvector operator^(const GCA_bivector& a, const GCA_bivector& b){
   for (int i=0; i<=size; ++i){
     // Les bases duales de e24=-e13 et celle de e13=-e24, qui sont aux indices 1 et 4 dans Bases
     if (i==1 || i==4){
-      result->value -= a(i)*b(size-i);
+      result.value -= a(i) * b(size-i);
     }
     else{
-    	result->value += a(i)*b(size-i);
+      result.value += a(i) * b(size-i);
     }
   }	
 }
@@ -36,10 +35,10 @@ GCA_quadvector operator^(const GCA_bivector& a, const GCA_antibivector& b){
   for (int i=0; i<=size; ++i){
     // Les bases duales de e24=-e13 et celle de e13=-e24, qui sont aux indices 1 et 4 dans Bases
     if (i==1 || i==4){
-      result->value -= a(i)*b(size-i);
+      result.value -= a(i)*b(size-i);
     }
     else{
-    	result->value += a(i)*b(size-i);
+      result.value += a(i)*b(size-i);
     }
   }	
   return result;
@@ -58,14 +57,14 @@ GCA_trivector operator^(const GCA_antitrivector& a, const GCA_bivector& b){
 
 GCA_bivector operator^(const GCA_bivector& a, const GCA_antiquadvector& b){
 	GCA_bivector result;
-	GCA_scalar BD-b=~b;
-	result = a^BD-b;
+  GCA_scalar BD_b = ~b;
+  result = a^BD_b;
 	return result;
 }
 
 GCA_antibivector operator~(const GCA_bivector& a){
 	GCA_antibivector result;
-	result<< a(0),-a(1),a(2),a(3),-a(4),a(5),
+  result<< a(0),-a(1),a(2),a(3),-a(4),a(5);
 	return result;
 }
 

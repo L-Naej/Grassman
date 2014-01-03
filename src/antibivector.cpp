@@ -25,11 +25,14 @@ GCA_antibivector::~GCA_antibivector()
 {
 }
 
-void GCA_antibivector::setBases(){
-  for (int i=1; i<=3; ++i){
-    for (int j=i+1; j<=4; ++j){
-        Bases.push_back(i*10+j*);
-      }
+void GCA_antibivector::setBases()
+{
+  for (unsigned int i=1; i<=3; ++i)
+  {
+    for (unsigned int j=i+1; j<=4; ++j)
+    {
+        Bases.push_back(i*10+j);
+     }
   }
 }
 

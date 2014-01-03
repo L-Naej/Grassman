@@ -3,14 +3,13 @@
 using namespace gca;
 
 
-
 GCA_scalar::GCA_scalar()
-  : Bases(0),value(0)
+  : Bases(0), value(0)
 {
 }
 
 GCA_scalar::GCA_scalar(const GCA_scalar& other)
-  : Bases(0),value(other->value)
+  : Bases(0),value(other.value)
 {
 }
 

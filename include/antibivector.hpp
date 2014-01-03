@@ -12,16 +12,16 @@ class GCA_antibivector: public Vector6d
 public:
   typedef Vector6d Base;
 
-GCA_antibivector::GCA_antibivector();
+  GCA_antibivector();
 
-GCA_antibivector::GCA_antibivector(const GCA_antibivector& other);
+  GCA_antibivector(const GCA_antibivector& other);
 
-GCA_antibivector::GCA_antibivector(double a, double b, double c, double d, double e, double f);
+  GCA_antibivector(double a, double b, double c, double d, double e, double f);
 
 
-GCA_antibivector::~GCA_antibivector();
+  ~GCA_antibivector();
 
-void GCA_antibivector::setBases();
+  void setBases();
 
 private:
   std::vector <unsigned int> Bases;

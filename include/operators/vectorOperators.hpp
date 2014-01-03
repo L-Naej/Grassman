@@ -4,8 +4,9 @@
 #include "bivector.hpp"
 #include "trivector.hpp"
 #include "quadvector.hpp"
-
-
+#include "antibivector.hpp"
+#include "antivector.hpp"
+#include "antitrivector.hpp"
 
 namespace gca
 {
@@ -24,10 +25,10 @@ GCA_trivector operator^(const GCA_vector& a, const GCA_antibivector& b);
 
 GCA_bivector operator^(const GCA_vector& a, const GCA_antitrivector& b);
 
-GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b);
+//GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b);
 
 // convertisseur en base duale
-GCA_antitrivector operator~(const GCA_scalar& a);
+//GCA_antitrivector operator~(const GCA_scalar& a);
 
 
 

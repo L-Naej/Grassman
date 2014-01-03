@@ -1,4 +1,4 @@
-#include "vectorOperators.hpp"
+#include "operators/vectorOperators.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
 #include "trivector.hpp"
@@ -49,10 +49,10 @@ GCA_quadvector operator^(const GCA_trivector& a, const GCA_vector& b){
 
   for (int i=0; i<=b.size(); ++i){
     if (i%2 == 0){
-      result->value -= a(i)*b(size-i);
+      result.value -= a(i)*b(size-i);
     }
     else{
-      result->value += a(i)*b(size-i);
+      result.value += a(i)*b(size-i);
     }
   }
   return result; 
@@ -64,10 +64,10 @@ GCA_quadvector result;
     int size = b.size()-1;
     for (int i=0; i<=b.size(); ++i){
         if (i%2 == 0){
-          result->value -= a(i)*b(size-i);
+          result.value -= a(i)*b(size-i);
         }
         else{
-          result->value += a(i)*b(size-i);
+          result.value += a(i)*b(size-i);
         }
       }
       return result;  
@@ -95,13 +95,12 @@ GCA_bivector operator^(const GCA_vector& a, const GCA_antitrivector& b){
   }
 
   return res;
-  
 }
 
 GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
   GCA_vector result;
-  GCA_scalar BD-b=~b;
-  result = a^BD-b;
+  GCA_scalar BD_b=~b;
+  result = a^BD_b;
   return result;
 }
 
@@ -110,6 +109,6 @@ GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
 //car Bases (1,2,3,4)
 GCA_antitrivector operator~(const GCA_scalar& a){
   GCA_antitrivector result;
-  result<< -a(0), a(1, -a(2), a(3);
+  result << -a(0), a(1), -a(2), a(3);
     return result;
 }

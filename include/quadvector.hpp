@@ -1,4 +1,5 @@
 #pragma once
+#include <Eigen/Dense>
 
 namespace gca
 {
@@ -9,10 +10,10 @@ namespace gca
 	  typedef Eigen::Vector4d Base;
 
 		GCA_quadvector();
-		GCA_quadivector (const GCA_quadvector& other);
+    GCA_quadvector (const GCA_quadvector& other);
 		GCA_quadvector(double a, double b,double c,double d);
 		~GCA_quadvector();
-		void GCA_quadvector::setBases();
+    void setBases();
 
 		std::vector<unsigned int> Bases;
 

@@ -1,7 +1,6 @@
 #pragma once
 #include "quadvectorOperators.hpp"
 #include "quadvector.hpp"
-#include "antiquadvector.hpp"
 #include "antiscalar.hpp"
 
 namespace gca

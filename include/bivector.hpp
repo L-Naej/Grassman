@@ -18,12 +18,12 @@ public:
 	GCA_bivector (const GCA_bivector& other);
   GCA_bivector(double a, double b, double c, double d, double e, double f);
 	~GCA_bivector();
-  void GCA_bivector::setBases();
+  void setBases();
 
 
 private:
   //Les bases par composante
-std::vector<unsigned int> Bases;
+  std::vector<unsigned int> Bases;
 
 };
 
