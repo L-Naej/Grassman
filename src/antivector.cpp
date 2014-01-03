@@ -29,6 +29,12 @@ GCA_antivector::~GCA_antivector()
 {
 }
 
+GCA_antivector&GCA_antivector::operator =(const GCA_antivector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+}
+
 void GCA_antivector::setBases(){
 	for (int i=0; i<4; ++i){
 		Bases.push_back(i);

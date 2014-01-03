@@ -15,6 +15,8 @@ namespace gca
 		~GCA_quadvector();
     void setBases();
 
+    GCA_quadvector& operator=(const GCA_quadvector& other);
+
 		std::vector<unsigned int> Bases;
 
 	};

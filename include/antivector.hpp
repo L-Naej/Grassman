@@ -20,6 +20,8 @@ namespace gca
 
     ~GCA_antivector();
 
+    GCA_antivector& operator=(const GCA_antivector& other);
+
   void setBases();
 
 	private:

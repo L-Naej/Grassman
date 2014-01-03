@@ -13,6 +13,8 @@ public:
 	~GCA_trivector();
   void setBases();
 
+  GCA_trivector& operator=(const GCA_trivector& other);
+
 private:
 	std::vector<unsigned int> Bases;
 

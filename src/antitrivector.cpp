@@ -29,6 +29,14 @@ GCA_antitrivector::~GCA_antitrivector()
 {
 }
 
+GCA_antitrivector&GCA_antitrivector::operator =(const GCA_antitrivector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+
+  return *this;
+}
+
 void GCA_antitrivector::setBases(){
 	for (int i=1; i<=2; ++i){
 		for (int j=i+1; j<=3; ++j){

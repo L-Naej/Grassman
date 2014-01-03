@@ -33,3 +33,11 @@ void GCA_bivector::setBases(){
   }
 }
 
+GCA_bivector&GCA_bivector::operator =(const GCA_bivector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+
+  return *this;
+}
+

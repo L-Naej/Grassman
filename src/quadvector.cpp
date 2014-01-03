@@ -29,5 +29,12 @@ GCA_quadvector::~GCA_quadvector()
 }
 
 void GCA_quadvector::setBases(){
-	Bases.push_back(1234);
+  Bases.push_back(1234);
+}
+
+GCA_quadvector&GCA_quadvector::operator =(const GCA_quadvector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+  return *this;
 }

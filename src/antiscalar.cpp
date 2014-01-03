@@ -22,3 +22,9 @@ GCA_antiscalar::~GCA_antiscalar()
 {
 }
 
+GCA_antiscalar&GCA_antiscalar::operator =(const GCA_antiscalar& other)
+{
+  value = other.value;
+  return *this;
+}
+

@@ -25,6 +25,13 @@ GCA_antibivector::~GCA_antibivector()
 {
 }
 
+GCA_antibivector& GCA_antibivector::operator =(const GCA_antibivector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+  return *this;
+}
+
 void GCA_antibivector::setBases()
 {
   for (unsigned int i=1; i<=3; ++i)

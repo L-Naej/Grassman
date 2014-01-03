@@ -21,3 +21,11 @@ GCA_scalar::GCA_scalar(double value)
 GCA_scalar::~GCA_scalar()
 {
 }
+
+GCA_scalar&GCA_scalar::operator =(const GCA_scalar& other)
+{
+  *this = other;
+  Bases = other.Bases;
+
+  return *this;
+}

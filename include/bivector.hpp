@@ -20,6 +20,8 @@ public:
 	~GCA_bivector();
   void setBases();
 
+  GCA_bivector& operator=(const GCA_bivector& other);
+
 
 private:
   //Les bases par composante

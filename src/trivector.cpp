@@ -36,5 +36,12 @@ void GCA_trivector::setBases(){
 				Bases.push_back(i*100+j*10+k);
 			}
 		}
-	}
+  }
+}
+
+GCA_trivector&GCA_trivector::operator =(const GCA_trivector& other)
+{
+  *this = other;
+  Bases = other.Bases;
+  return *this;
 }

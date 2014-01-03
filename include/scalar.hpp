@@ -15,6 +15,8 @@ namespace gca
     GCA_scalar(double value);
     ~GCA_scalar();
 
+    GCA_scalar& operator=(const GCA_scalar& other);
+
     operator double() const
     {return value;}
 

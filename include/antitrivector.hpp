@@ -19,6 +19,8 @@ namespace gca
 
     ~GCA_antitrivector();
 
+    GCA_antitrivector& operator=(const GCA_antitrivector& other);
+
     void setBases();
 
 private:

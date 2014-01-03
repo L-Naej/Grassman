@@ -21,7 +21,11 @@ public:
 
   ~GCA_antibivector();
 
+  GCA_antibivector& operator=(const GCA_antibivector& other);
+
   void setBases();
+
+
 
 private:
   std::vector <unsigned int> Bases;
