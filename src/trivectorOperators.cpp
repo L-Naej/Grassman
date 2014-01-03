@@ -1,4 +1,3 @@
-#pragma once
 #include "operators/trivectorOperators.hpp"
 #include "operators/scalarOperators.hpp"
 #include "anti_operators/antiquadvectorOperators.hpp"
