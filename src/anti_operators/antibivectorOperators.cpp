@@ -1,6 +1,8 @@
 #include "anti_operators/antibivectorOperators.hpp"
 #include "scalar.hpp"
 #include "antibivector.hpp"
+#include "bivector.hpp"
+
 
 
 
@@ -23,7 +25,11 @@ GCA_scalar operator^(const GCA_antibivector& a, const GCA_antibivector& b){
   return result;
 }
 
-
+GCA_bivector operator~(const GCA_antibivector& a){
+    GCA_bivector result;
+    result << a(0), -a(1), a(2), a(3), -a(4), a(5);
+    return result;
+}
 
 
 }

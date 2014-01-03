@@ -110,8 +110,8 @@ GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
 /*--------------------------------------- Le convertisseur en base duale donne un trivector ---------------------------------------*/
 
 //car Bases (1,2,3,4)
-/*GCA_antitrivector operator~(const GCA_scalar& a){
+GCA_antitrivector operator~(const GCA_scalar& a){
   GCA_antitrivector result;
   result << -a(0), a(1), -a(2), a(3);
     return result;
-}*/
+}

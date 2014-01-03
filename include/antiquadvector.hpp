@@ -9,6 +9,7 @@ namespace gca
   public:
 		double value;
 		std::vector <unsigned int> Bases;
+        
     GCA_antiquadvector();
 
     GCA_antiquadvector(const GCA_antiquadvector& other);

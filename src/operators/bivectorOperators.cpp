@@ -56,14 +56,13 @@ GCA_trivector operator^(const GCA_antitrivector& a, const GCA_bivector& b){
 
 }
 
-/*
+
 GCA_bivector operator^(const GCA_bivector& a, const GCA_antiquadvector& b){
 	GCA_bivector result;
   GCA_scalar BD_b = ~b;
   result = a^BD_b;
 	return result;
 }
-*/
 
 GCA_antibivector operator~(const GCA_bivector& a){
 	GCA_antibivector result;
