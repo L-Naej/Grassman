@@ -13,9 +13,9 @@
 namespace gca
 {
 
-GCA_quadvector operator~(const GCA_trivector& a, const GCA_antitrivector b);
+GCA_quadvector operator^(const GCA_trivector& a, const GCA_antitrivector b);
 
-GCA_quadvector operator~(const GCA_trivector& a, const GCA_antiquadvector b);
+GCA_quadvector operator^(const GCA_trivector& a, const GCA_antiquadvector b);
 
 GCA_antivector operator~(const GCA_trivector& a);
 }

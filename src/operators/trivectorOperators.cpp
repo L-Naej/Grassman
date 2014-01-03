@@ -13,7 +13,7 @@
 namespace gca
 {
 
-GCA_quadvector operator~(const GCA_trivector& a, const GCA_antitrivector b){
+GCA_quadvector operator^(const GCA_trivector& a, const GCA_antitrivector b){
 	GCA_quadvector result;
   	int size = b.size()-1;
 
@@ -30,7 +30,7 @@ GCA_quadvector operator~(const GCA_trivector& a, const GCA_antitrivector b){
 }
 
 
-GCA_quadvector operator~(const GCA_trivector& a, const GCA_antiquadvector b){
+GCA_quadvector operator^(const GCA_trivector& a, const GCA_antiquadvector b){
 	GCA_vector result;
 	  GCA_scalar BD-b=~b;
 	  result = a^BD-b;

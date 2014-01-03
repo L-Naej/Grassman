@@ -23,6 +23,6 @@ void plop()
   gca :: GCA_vector x1 (2.0 , -1.0 , -1.0 ,1.0);
   gca :: GCA_vector x2 (1.0 , -1.0 ,1.0 ,1.0);
   gca :: GCA_vector x3 ( -1.0 , -1.0 , -2.0 ,1.0);
-  gca :: GCA_trivector d = x1 ^ x2 ^ x3 ; // d is a plane
-  std :: cout << " intersection : " << ~ d ^~ l << std :: endl ;
+  //gca :: GCA_trivector d = x1 ^ x2 ^ x3 ; // d is a plane
+  //std :: cout << " intersection : " << ~ d ^~ l << std :: endl ;
 }
