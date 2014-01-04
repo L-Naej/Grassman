@@ -19,8 +19,6 @@ public:
 	~GCA_vector();
   void setBases();
 
-  GCA_vector& operator=(const GCA_vector& other);
-
 	std::vector <unsigned int> Bases;
 
 };

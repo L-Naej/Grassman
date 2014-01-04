@@ -26,4 +26,5 @@ GCA_antiscalar operator~(const GCA_quadvector& a){
   result = a(0);
 	return result;
 }
-}
+
+} //namespace gca

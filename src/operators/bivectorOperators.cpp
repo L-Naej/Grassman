@@ -1,4 +1,6 @@
 #include "operators/bivectorOperators.hpp"
+#include "operators/scalarOperators.hpp"
+#include "anti_operators/antiquadvectorOperators.hpp"
 #include "bivector.hpp"
 #include "quadvector.hpp"
 #include "trivector.hpp"

@@ -1,8 +1,7 @@
 #include "vector.hpp"
 
-using namespace gca;
-
-
+namespace gca
+{
 
 GCA_vector::GCA_vector()
   : Base()
@@ -35,3 +34,5 @@ void GCA_vector::setBases(){
 		Bases.push_back(i);
 	}
 }
+
+} // namespace gca

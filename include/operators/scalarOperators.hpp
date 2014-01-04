@@ -17,12 +17,16 @@ class GCA_antiquadvector;
 GCA_scalar operator^ (const GCA_scalar& a, const GCA_scalar& b);
 
 GCA_vector operator^ (const GCA_scalar& a, const GCA_vector& b);
+GCA_vector operator^ (const GCA_vector& b, const GCA_scalar& a);
 
 GCA_bivector operator^ (const GCA_scalar& a, const GCA_bivector& b);
+GCA_bivector operator^ (const GCA_bivector& b, const GCA_scalar& a);
 
 GCA_trivector operator^ (const GCA_scalar& a, const GCA_trivector& b);
+GCA_trivector operator^ (const GCA_trivector& b, const GCA_scalar& a);
 
 GCA_quadvector operator^ (const GCA_scalar& a, const GCA_quadvector& b);
+GCA_quadvector operator^ (const GCA_quadvector& b, const GCA_scalar& a);
 
 
 /*  ----------------------------------------- ANTI ----------------------------------------------*/

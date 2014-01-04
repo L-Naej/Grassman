@@ -11,7 +11,8 @@
 #include "antitrivector.hpp"
 #include "antiquadvector.hpp"
 
-using namespace gca;
+namespace gca
+{
 
 GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
 {
@@ -35,6 +36,11 @@ GCA_trivector operator^(const GCA_vector& a, const GCA_bivector& b){
     result(3) = b(3)*a(3) - b(4)*a(2) + b(5)*a(1);
     return result;
 
+}
+
+GCA_trivector operator ^(const GCA_bivector& b, const GCA_vector& a)
+{
+  return a^b;
 }
 
 /* EXPLICATION 
@@ -110,8 +116,11 @@ GCA_vector operator^(const GCA_vector& a, const GCA_antiquadvector& b){
 /*--------------------------------------- Le convertisseur en base duale donne un trivector ---------------------------------------*/
 
 //car Bases (1,2,3,4)
-GCA_antitrivector operator~(const GCA_scalar& a){
+GCA_antitrivector operator~(const GCA_vector& a){
   GCA_antitrivector result;
   result << -a(0), a(1), -a(2), a(3);
-    return result;
+  return result;
 }
+
+
+} //namespace gca

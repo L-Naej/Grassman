@@ -49,4 +49,5 @@ GCA_antivector operator~(const GCA_trivector& a){
 	result<< -a(0),a(1),-a(2),a(3);
 	return result;
 }
-}
+
+} //namespace gca
