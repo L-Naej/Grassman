@@ -21,6 +21,12 @@ GCA_antiscalar::~GCA_antiscalar()
 {
 }
 
+std::ostream& operator <<(std::ostream& stream, const GCA_antiscalar& antiscalar)
+{
+  stream << "Antiscalar[" << antiscalar.value << "]";
+  return stream;
+}
+
 /*GCA_antiscalar&GCA_antiscalar::operator =(const GCA_antiscalar& other)
 {
   value = other.value;

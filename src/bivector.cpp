@@ -1,6 +1,7 @@
 #include "bivector.hpp"
 
-using namespace gca;
+namespace gca
+{
 
 GCA_bivector::GCA_bivector()
   : Base()
@@ -41,3 +42,12 @@ GCA_bivector&GCA_bivector::operator =(const GCA_bivector& other)
   return *this;
 }
 
+//Bases (e12, e13, e14, e23, e24, e34)
+std::ostream& operator <<(std::ostream& stream, const GCA_bivector& bivector)
+{
+  stream << "Bivector[" << bivector(0) << "e12, " << bivector(1) << "e13, " << bivector(2) << "e14, " << bivector(3) << "e23, "
+         << bivector(4) << "e24, " << bivector(5) << "e34]";
+  return stream;
+}
+
+} //namespace gca

@@ -1,8 +1,7 @@
 #include "antivector.hpp"
 
-using namespace gca;
-
-
+namespace gca
+{
 	GCA_antivector::GCA_antivector()
   : Base()
 {
@@ -40,5 +39,12 @@ GCA_antivector&GCA_antivector::operator =(const GCA_antivector& other)
 void GCA_antivector::setBases(){
 	for (int i=0; i<4; ++i){
 		Bases.push_back(i);
-	}
+  }
+}
+
+std::ostream& operator <<(std::ostream& stream, const GCA_antivector& antivector)
+{
+  stream << "Antivector[" << antivector(0) << "e1, " << antivector(1) << "e2, " << antivector(2) << "e3, " << antivector(3) << "e4]";
+  return stream;
+}
 }

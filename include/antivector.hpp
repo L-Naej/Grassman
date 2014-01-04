@@ -2,6 +2,7 @@
 
 #include <Eigen/Dense>
 #include <vector>
+#include <iostream>
 
 namespace gca
 {
@@ -24,6 +25,8 @@ namespace gca
     GCA_antivector& operator=(const GCA_antivector& other);
 
   void setBases();
+
+  friend std::ostream& operator<<(std::ostream& stream, const GCA_antivector& antivector);
 
 	private:
 	std::vector <unsigned int> Bases;

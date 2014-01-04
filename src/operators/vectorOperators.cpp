@@ -19,7 +19,7 @@ GCA_bivector operator^(const GCA_vector& a, const GCA_vector& b)
   GCA_bivector res;
   int compteur = 0;
   for (int i=0; i<a.size()-1; ++i){
-    for (int j=i+1; i<a.size(); ++j){
+    for (int j=i+1; j<a.size(); ++j){
       res(compteur)=a(i)*b(j)-a(j)*b(i);
       compteur ++;
     }

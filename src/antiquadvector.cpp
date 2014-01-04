@@ -1,7 +1,7 @@
 #include "antiquadvector.hpp"
 
-using namespace gca;
-
+namespace gca
+{
 GCA_antiquadvector::GCA_antiquadvector()
   :value(0)
 {
@@ -29,5 +29,13 @@ GCA_antiquadvector::~GCA_antiquadvector()
 }*/
 
 void GCA_antiquadvector::setBases(){
-	Bases.push_back(1234);
+  Bases.push_back(1234);
 }
+
+std::ostream& operator <<(std::ostream& stream, const GCA_antiquadvector& antiquadvector)
+{
+  stream << "Antiquadvector[" << antiquadvector.value << "e1234]";
+  return stream;
+}
+
+} // namespace gca

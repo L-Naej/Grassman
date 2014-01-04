@@ -30,4 +30,10 @@ GCA_scalar&GCA_scalar::operator =(const GCA_scalar& other)
   return *this;
 }
 
+std::ostream& operator <<(std::ostream& stream, const GCA_scalar& scalar)
+{
+  stream << "Scalar[" << scalar.value << "]";
+  return stream;
+}
+
 

@@ -2,7 +2,7 @@
 
 #include <Eigen/Dense>
 #include <vector>
-
+#include <iostream>
 
 //nombre de base possible : 4 (e123,e124,e134,e234) donc vector4d
 namespace gca
@@ -20,6 +20,8 @@ public:
   void setBases();
 
   GCA_trivector& operator=(const GCA_trivector& other);
+
+  friend std::ostream& operator<<(std::ostream& stream, const GCA_trivector& trivector);
 
 private:
 	std::vector<unsigned int> Bases;

@@ -2,6 +2,7 @@
 #include <vector>
 
 #include <Eigen/Dense>
+#include <iostream>
 
 namespace gca
 {
@@ -19,6 +20,8 @@ namespace gca
 
     operator double() const
     {return value;}
+
+    friend std::ostream& operator<<(std::ostream& stream, const GCA_scalar& scalar);
 
     double value;
 

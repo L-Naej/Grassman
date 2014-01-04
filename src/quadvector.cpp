@@ -36,3 +36,10 @@ GCA_quadvector&GCA_quadvector::operator =(const GCA_quadvector& other)
   Bases = other.Bases;
   return *this;
 }
+
+//Bases (e1234)
+std::ostream& operator <<(std::ostream& stream, const GCA_quadvector& quadvector)
+{
+  stream << "Quadvector[" << quadvector(0) << "e1234]";
+  return stream;
+}

@@ -3,6 +3,7 @@
 //nombre de base possible : 6 (e12,e13,e14,e23,e24,e34)
 #include <Eigen/Dense>
 #include <vector>
+#include <iostream>
 
 namespace gca
 {
@@ -22,6 +23,8 @@ public:
   void setBases();
 
   GCA_bivector& operator=(const GCA_bivector& other);
+
+  friend std::ostream& operator<<(std::ostream& stream, const GCA_bivector& bivector);
 
 
 private:
