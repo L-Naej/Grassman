@@ -52,4 +52,4 @@ std::ostream& operator <<(std::ostream& stream, const GCA_antibivector& antibive
   return stream;
 }
 
-}
+} //namespace gca

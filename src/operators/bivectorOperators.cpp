@@ -72,6 +72,6 @@ GCA_antibivector operator~(const GCA_bivector& a){
 	return result;
 }
 
-}
+}//namespace gca
 
 

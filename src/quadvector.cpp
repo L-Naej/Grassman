@@ -1,8 +1,8 @@
 #include "quadvector.hpp"
 
-using namespace gca;
-
-	GCA_quadvector::GCA_quadvector()
+namespace gca
+{
+GCA_quadvector::GCA_quadvector()
   : Base()
 {
 	setBases();
@@ -43,3 +43,5 @@ std::ostream& operator <<(std::ostream& stream, const GCA_quadvector& quadvector
   stream << "Quadvector[" << quadvector(0) << "e1234]";
   return stream;
 }
+
+} //namespace gca

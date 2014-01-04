@@ -1,7 +1,7 @@
 #include "scalar.hpp"
 
-using namespace gca;
-
+namespace gca
+{
 
 GCA_scalar::GCA_scalar()
   : Bases(0), value(0)
@@ -37,3 +37,4 @@ std::ostream& operator <<(std::ostream& stream, const GCA_scalar& scalar)
 }
 
 
+} // namespace gca

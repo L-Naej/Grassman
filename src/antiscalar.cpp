@@ -1,6 +1,7 @@
 #include "antiscalar.hpp"
 
-using namespace gca;
+namespace gca
+{
 
 GCA_antiscalar::GCA_antiscalar()
 {
@@ -33,3 +34,4 @@ std::ostream& operator <<(std::ostream& stream, const GCA_antiscalar& antiscalar
   return *this;
 }*/
 
+} //namespace gca

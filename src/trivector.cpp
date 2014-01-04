@@ -1,9 +1,9 @@
 #include "trivector.hpp"
 
-using namespace gca;
+namespace gca
+{
 
-
-	GCA_trivector::GCA_trivector()
+GCA_trivector::GCA_trivector()
   : Base()
 {
 	setBases();
@@ -54,3 +54,5 @@ std::ostream& operator <<(std::ostream& stream, const GCA_trivector& trivector)
          << "e134," << trivector(3) << "e234]";
   return stream;
 }
+
+} //namespace gca
