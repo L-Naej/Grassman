@@ -62,6 +62,14 @@ Afin de résoudre ce problème, nous avons utilisé des fonctions externes, donc
 
 Pour faciliter l'utilisation des classes représentant des scalaires, nous avons aussi surchargé quand le besoin s'en est fait sentir, l'opérateur double() et l'opérateur int(). La conversion d'un GCA\_scalar en type primitif C++ est donc transparente aux yeux de l'utilisateur. 
 
+Un autre problème de dernière minute est survenu lorsque nous avons tenté d'exécuter la fonction donnée en exemple dans le sujet.
+Il se trouve à l'intérieur l'équivalent d'une instruction comme celle-ci :
+$$ std::cout << vector1 \textasciicircum vector2 << std::endl$$
+Cette instruction est incorrecte. En effet, l'ordre de priorité des opérateurs en C++ stipule que l'opérateur "<<" est prioritaire sur "\textasciicircum ". Ainsi l'expression est évaluée comme ceci :
+$$ (std::cout.operator<<(vector1)).operator\textasciicircum(vector2)$$
+Or il est évidemment impossible d'implémenter un opérateur \textasciicircum qui ait un sens pour std::ostream (la classe de cout).
+Ce problème ne peut être résolu qu'en indiquant explicitement la priorité de l'opération de wedge product, en entourant cette opération avec des parenthèses.
+
 %%%
 
 
