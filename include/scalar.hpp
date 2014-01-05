@@ -19,6 +19,7 @@ namespace gca
     GCA_scalar& operator=(const GCA_scalar& other);
 
     void operator<<(const double& value);
+    void operator<<(const int& value);
 
     operator double() const
     {return value;}

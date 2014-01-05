@@ -35,6 +35,11 @@ void GCA_scalar::operator <<(const double& value)
   this->value = value;
 }
 
+void GCA_scalar::operator <<(const int& value)
+{
+  this->value = value;
+}
+
 std::ostream& operator <<(std::ostream& stream, const GCA_scalar& scalar)
 {
   stream << "Scalar[" << scalar.value << "]";
