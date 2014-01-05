@@ -35,11 +35,20 @@ Ce rapport présente notre travail et la façon dont nous avons résolu les prob
 \section{Mathématiques}
 Le premier problème d’ordre mathématique a été au niveau de la compréhension de l’algèbre de Grassman en lui-même. Nous avons eu du mal avec la partie sur les bases duales, pourquoi certaines sont négatives et pourquoi certaines sont positives. Il a fallu que nous posions tous les calculs sur feuille. Nous en sommes arrivés au resultats suivants : 
 \newline Pour les vecteurs: 
-$$e1=-e234 e2=e134 e3=-e124 e4=e123$$ 
+\begin{itemize}
+\item $$e1=-\overline{e234}$$  \item $$e2=\overline{e134}$$ \item $$e3=-\overline{e124}$$ \item $$e4=\overline{e123}$$ 
+\end{itemize}
 Pour les bivecteurs:
-$$e12=e34 e13=-e24 e14=e23 e23=e14 e24=-e13 e34=e12$$
+\begin{itemize}
+\item $$e12=\overline{e34}$$ \item $$ e13=-\overline{e24}$$ \item $$e14=\overline{e23}$$ \item $$e23=\overline{e14}$$ \item $$e24=-\overline{e13}$$ \item $$e34=\overline{e12}$$
+
+\end{itemize}
+
 Pour les trivecteurs: 
-$$e123=-e4 e124=e3 e134=-e2 e234=e1$$
+\begin{itemize}
+\item $$e123=-\overline{e4} $$ \item $$e124=\overline{e3} $$ \item $$e134=-\overline{e2} $$ \item $$e234=\overline{e1}$$
+\end{itemize}
+
 Cela nous a permis de comprendre comment faire les opérateurs \textasciicircum  et \textasciitilde.
 
 
