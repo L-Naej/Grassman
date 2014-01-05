@@ -55,7 +55,7 @@ GCA_scalar operator^(const GCA_antiscalar& a, const GCA_antiquadvector& b){
 }
 
 GCA_quadvector operator~(const GCA_antiscalar& a){
-    GCA_quadvector result = this->value;
+    GCA_quadvector result = a.value;
     return result;
 }
 

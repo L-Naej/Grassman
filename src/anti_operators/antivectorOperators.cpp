@@ -2,6 +2,7 @@
 #include "scalar.hpp"
 #include "vector.hpp"
 #include "bivector.hpp"
+#include "trivector.hpp"
 
 #include "antivector.hpp"
 #include "antibivector.hpp"
@@ -51,7 +52,7 @@ GCA_bivector operator^(const GCA_antivector& a, const GCA_antivector& b){
 }
 
 GCA_trivector operator~(const GCA_antivector& a){
-    GCA_vector result;
+    GCA_trivector result;
     result << -a(0), a(1), -a(2), a(3);
     return result;
 }
