@@ -1,4 +1,4 @@
-Grassman
+Grassmann
 ========
 
 IMAC 2 Math project<br/>
