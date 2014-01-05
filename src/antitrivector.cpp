@@ -53,7 +53,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_antitrivector& antitri
   stream << "Antitrivector[";
   for (unsigned int i = 0; i < antitrivector.rows(); ++i)
   {
-    stream << antitrivector(i) << antitrivector.Bases[i];
+    stream << antitrivector(i) << "e" << antitrivector.Bases[i];
     i != (antitrivector.rows() - 1) ? stream << ", " : stream << "]";
   }
   return stream;

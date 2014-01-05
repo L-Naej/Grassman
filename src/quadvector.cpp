@@ -43,7 +43,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_quadvector& quadvector
   stream << "Quadvector[";
   for (unsigned int i = 0; i < quadvector.rows(); ++i)
   {
-    stream << quadvector(i) << quadvector.Bases[i];
+    stream << quadvector(i) << "e" << quadvector.Bases[i];
     i != (quadvector.rows() - 1) ? stream << ", " : stream << "]";
   }
   return stream;

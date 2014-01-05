@@ -47,7 +47,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_antivector& antivector
   stream << "Antivector[";
   for (unsigned int i = 0; i < antivector.rows(); ++i)
   {
-    stream << antivector(i) << antivector.Bases[i];
+    stream << antivector(i) << "e" << antivector.Bases[i];
     i != (antivector.rows() - 1) ? stream << ", " : stream << "]";
   }
   return stream;

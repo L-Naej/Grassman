@@ -48,7 +48,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_bivector& bivector)
   stream << "Bivector[";
   for (unsigned int i = 0; i < bivector.rows(); ++i)
   {
-    stream << bivector(i) << bivector.Bases[i];
+    stream << bivector(i) << "e" << bivector.Bases[i];
     i != (bivector.rows() - 1) ? stream << ", " : stream << "]";
   }
   return stream;

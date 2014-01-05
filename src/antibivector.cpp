@@ -50,7 +50,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_antibivector& antibive
   stream << "Antibivector[";
   for (unsigned int i = 0; i < antibivector.rows(); ++i)
   {
-    stream << antibivector(i) << antibivector.Bases[i];
+    stream << antibivector(i) << "e" << antibivector.Bases[i];
     i != (antibivector.rows() - 1) ? stream << ", " : stream << "]";
   }
   return stream;

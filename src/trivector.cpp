@@ -53,7 +53,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_trivector& trivector)
   stream << "Trivector[" ;
   for (unsigned int i = 0; i < trivector.rows(); ++i)
   {
-    stream << trivector(i) << trivector.Bases[i];
+    stream << trivector(i) << "e" << trivector.Bases[i];
     i != (trivector.rows() - 1) ? stream << ", " : stream << "]";;
   }
   return stream;

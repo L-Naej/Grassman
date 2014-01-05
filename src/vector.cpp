@@ -40,7 +40,7 @@ std::ostream& operator <<(std::ostream& stream, const GCA_vector& vector)
   stream << "Vector[";
   for (unsigned int i = 0; i < vector.rows(); ++i)
   {
-    stream << vector(i) << vector.Bases[i];
+    stream << vector(i) << "e" << vector.Bases[i];
     i != (vector.rows() - 1) ? stream << ", " : stream << "]";;
   }
   return stream;
