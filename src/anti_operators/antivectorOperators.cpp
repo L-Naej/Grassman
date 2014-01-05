@@ -50,4 +50,10 @@ GCA_bivector operator^(const GCA_antivector& a, const GCA_antivector& b){
   return res;
 }
 
+GCA_trivector operator~(const GCA_antivector& a){
+    GCA_vector result;
+    result << -a(0), a(1), -a(2), a(3);
+    return result;
+}
+
 }
