@@ -5,6 +5,7 @@
 #include "operators/trivectorOperators.hpp"
 #include "operators/bivectorOperators.hpp"
 #include "operators/quadvectorOperators.hpp"
+#include "anti_operators/antivectorOperators.hpp"
 #include "scalar.hpp"
 
 #include <iostream>
@@ -22,11 +23,16 @@ void plop()
   gca::GCA_vector x3 ( -1.0 , -1.0 , -2.0 ,1.0);
   gca::GCA_trivector d = x1 ^ x2 ^ x3 ; // d is a plane
   std::cout << d << std::endl;
-  //std :: cout << " intersection : " << (~ d ^ ~l) << std :: endl ;
+  std :: cout << " intersection : " << (~ d ^ ~l) << std :: endl ;
 }
 
 int main(int argc, char** argv)
 {
+  std::cout << "-------------Fonction plop()------------------";
+  plop();
+  std::cout << "-------------Fin Fonction plop()------------------";
+
+
   gca::GCA_vector vec1(1.0, 0.0, 0.0, 1.0);
   gca::GCA_vector vec2(0.0, 1.0, 0.0, 1.0);
   gca::GCA_vector vec3;
