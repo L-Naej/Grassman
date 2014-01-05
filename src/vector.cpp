@@ -37,7 +37,12 @@ void GCA_vector::setBases(){
 
 std::ostream& operator <<(std::ostream& stream, const GCA_vector& vector)
 {
-  stream << "Vector[" << vector(0) << "e1, " << vector(1) << "e2, " << vector(2) << "e3, " << vector(3) << "e4]";
+  stream << "Vector[";
+  for (unsigned int i = 0; i < vector.rows(); ++i)
+  {
+    stream << vector(i) << vector.Bases[i];
+    i != (vector.rows() - 1) ? stream << ", " : stream << "]";;
+  }
   return stream;
 }
 

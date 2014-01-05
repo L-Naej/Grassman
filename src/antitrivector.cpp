@@ -50,8 +50,12 @@ void GCA_antitrivector::setBases(){
 //Bases e123 , e124 , e134 , e234
 std::ostream& operator <<(std::ostream& stream, const GCA_antitrivector& antitrivector)
 {
-  stream << "Antitrivector[" << antitrivector(0) << "e123, " << antitrivector(1) << "e124, " << antitrivector(2) << "e134, "
-         << antitrivector(3) << "e234]";
+  stream << "Antitrivector[";
+  for (unsigned int i = 0; i < antitrivector.rows(); ++i)
+  {
+    stream << antitrivector(i) << antitrivector.Bases[i];
+    i != (antitrivector.rows() - 1) ? stream << ", " : stream << "]";
+  }
   return stream;
 }
 

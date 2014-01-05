@@ -40,7 +40,12 @@ GCA_quadvector&GCA_quadvector::operator =(const GCA_quadvector& other)
 //Bases (e1234)
 std::ostream& operator <<(std::ostream& stream, const GCA_quadvector& quadvector)
 {
-  stream << "Quadvector[" << quadvector(0) << "e1234]";
+  stream << "Quadvector[";
+  for (unsigned int i = 0; i < quadvector.rows(); ++i)
+  {
+    stream << quadvector(i) << quadvector.Bases[i];
+    i != (quadvector.rows() - 1) ? stream << ", " : stream << "]";
+  }
   return stream;
 }
 

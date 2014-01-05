@@ -34,7 +34,7 @@ void GCA_antiquadvector::setBases(){
 
 std::ostream& operator <<(std::ostream& stream, const GCA_antiquadvector& antiquadvector)
 {
-  stream << "Antiquadvector[" << antiquadvector.value << "e1234]";
+  stream << "Antiquadvector[" << antiquadvector.value << antiquadvector.Bases[0] <<  "]";
   return stream;
 }
 

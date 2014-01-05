@@ -47,8 +47,12 @@ void GCA_antibivector::setBases()
 //Bases e12 , e13 , e14 , e23 , e24 , e34
 std::ostream& operator <<(std::ostream& stream, const GCA_antibivector& antibivector)
 {
-  stream << "Antibivector[" << antibivector(0) << "e12, " << antibivector(1) << "e13, " << antibivector(2) << "e14, "
-         << antibivector(3) << "e23, " << antibivector(4) << "e24, " << antibivector(5) << "e34]";
+  stream << "Antibivector[";
+  for (unsigned int i = 0; i < antibivector.rows(); ++i)
+  {
+    stream << antibivector(i) << antibivector.Bases[i];
+    i != (antibivector.rows() - 1) ? stream << ", " : stream << "]";
+  }
   return stream;
 }
 

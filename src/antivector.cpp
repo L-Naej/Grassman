@@ -44,7 +44,12 @@ void GCA_antivector::setBases(){
 
 std::ostream& operator <<(std::ostream& stream, const GCA_antivector& antivector)
 {
-  stream << "Antivector[" << antivector(0) << "e1, " << antivector(1) << "e2, " << antivector(2) << "e3, " << antivector(3) << "e4]";
+  stream << "Antivector[";
+  for (unsigned int i = 0; i < antivector.rows(); ++i)
+  {
+    stream << antivector(i) << antivector.Bases[i];
+    i != (antivector.rows() - 1) ? stream << ", " : stream << "]";
+  }
   return stream;
 }
 }
