@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  Projet de Math IMAC2          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%             Alizée Camarasa JN Chiganne        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[12pt]{article}
+\usepackage{a4wide}
+\usepackage{t1enc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}  
+\usepackage[T1]{fontenc}   
+
+\begin{document}
+\pagestyle{headings}
+
+\title{Rapport : Algèbre de Grassmann-Cayley}
+\author{Alizée Camarasa, Jean-Noël Chiganne}
+\maketitle
+\newpage
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Introduction}
+Dans le cadre du cours de Mathématiques appliquées d'IMAC 2, nous avons été amenés à implémenter en C++ une librairie permettant de manipuler les objets mathématiques introduits par l'algèbre de Grassmann.
+Ce rapport présente notre travail et la façon dont nous avons résolu les problèmes que nous avons rencontrés.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\section{Mathématiques}
+Le premier problème d’ordre mathématique a été au niveau de la compréhension de l’algèbre de Grassman en lui-même. Nous avons eu du mal avec la partie sur les bases duales, pourquoi certaines sont négatives et pourquoi certaines sont positives. Il a fallu que nous posions tous les calculs sur feuille. Nous en sommes arrivés au resultats suivants : 
+
+Pour les vecteurs: 
+$$e1=-e234 e2=e134 e3=-e124 e4=e123$$ 
+Pour les bivecteurs:
+$$e12=e34 e13=-e24 e14=e23 e23=e14 e24=-e13 e34=e12$$
+Pour les trivecteurs: 
+$$e123=-e4 e124=e3 e134=-e2 e234=e1$$
+Cela nous a permis de comprendre comment faire les opérateurs $$^ et ~$$.
+
+
+\section{Programmation}
+Implémenter cette librairie en C++ s'est fait en plusieurs étapes. Tout d'abord nous avons défini les objets mathématiques sous forme de classes.
+En utilisant la librairie Eigen, nous avons pu profiter des fonctionnalités de la classe Matrix (notamment l'opérateur d'affectation "<<" et "=").
+
+Un problème rencontré lors du développement a été la surcharge des operéteurs "\^" et "\~" respectivement wedge product et base duale.
+En effet toutes les classes C++ dépendant les unes des autres pour ces opérateurs, il est apparu compliqué de les surcharger en tant que méthodes membres (risque de dépendance circulaire).
+Afin de résoudre ce problème, nous avons utilisé des fonctions externes, donc reliées à aucune classe.
+
+Pour faciliter l'utilisation des classes représentant des scalaires, nous avons aussi surchargé quand le besoin s'en est fait sentir, l'opérateur double() et l'opérateur int(). La conversion d'un GCA\_scalar en type primitif C++ est donc transparente aux yeux de l'utilisateur. 
+
+%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Conclusion}
+\LaTeX, c'est bien.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+
