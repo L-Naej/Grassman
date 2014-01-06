@@ -31,6 +31,18 @@ Ce rapport présente notre travail et la façon dont nous avons résolu les prob
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+\section{Travail accompli}
+\subsection{Travail demandé}
+\begin{itemize}
+\item Constructeurs de tout type
+\item Opérateurs usuels :  =, << d'initialisation, << d'affichage
+\item Opérateurs mathématiques : wedge (\textasciicircum) base duale (\textasciitilde)
+\end{itemize}
+
+\subsection{Travail non demandé}
+\begin{itemize}
+\item Opérateur double() et int() de conversion pour les types scalaires
+\end{itemize}
 
 \section{Mathématiques}
 Le premier problème d’ordre mathématique a été au niveau de la compréhension de l’algèbre de Grassman en lui-même. Nous avons eu du mal avec la partie sur les bases duales, pourquoi certaines sont négatives et pourquoi certaines sont positives. Il a fallu que nous posions tous les calculs sur feuille. Nous en sommes arrivés au resultats suivants : 
@@ -51,6 +63,8 @@ Pour les trivecteurs:
 
 Cela nous a permis de comprendre comment faire les opérateurs \textasciicircum  et \textasciitilde.
 
+A la base l'on n'avait pas bien saisi la nuance entre ce que renvoyait un wedge et un anti-wedge. A savoir que pour wedge : $$k-blade \textasciicircum j-blade = (k+j) blade$$ et que pour l'anti-wedge $$k-blade \textasciicircum j-blade = (k+j-n)-blade$$ où $$n$$ est la dimension.
+Nous nous étions donc trompés au début puisque nous avions fait (k+j)-blade pour l'anti-wedge aussi.
 
 \section{Programmation}
 Implémenter cette librairie en C++ s'est fait en plusieurs étapes. Tout d'abord nous avons défini les objets mathématiques sous forme de classes.
